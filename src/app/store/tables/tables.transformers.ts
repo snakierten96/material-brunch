@@ -6,7 +6,7 @@ export function deimmutifyTables(state: ITables): Object[] {
 }
 
 export function reimmutifyTables(plain): ITables {
-  return List<Itable>(plain ? plain.map(reimmutifyTable) : []);
+  return List<ITable>(plain ? plain.map(reimmutifyTable) : []);
 }
 
 function reimmutifyTable(table: any) {

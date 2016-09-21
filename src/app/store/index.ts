@@ -1,5 +1,7 @@
-import persistState from 'redux-localstorage';
-import createLogger from 'redux-logger';
+//import persistState from 'redux-localstorage';
+const persistState = require('redux-localstorage');
+//import createLogger from 'redux-logger';
+const createLogger = require('create-logger');
 
 import { IAppState, rootReducer, deimmutify, reimmutify } from './store';
 import { ILineup, IParty } from './lineup';
@@ -29,7 +31,7 @@ export const middleware = [
 export const enhancers = [
   persistState(
     '', {
-      key: 'trendy-brunch',
+      key: 'material-brunch',
       serialize: s => JSON.stringify(deimmutify(s)),
       deserialize: s => reimmutify(JSON.parse(s))
     })
