@@ -21,15 +21,12 @@ export function menuReducer(state: IMenu = INITIAL_STATE, action): IMenu {
         [menuIndex, 'stock'],
         0,
         value => value + 1);
-
     case ITEM_ADDED:
       return state.updateIn(
         [menuIndex, 'stock'],
         0,
         value => value === 0 ? 0 : value - 1);
-
     default:
       return state;
-
   }
 };
