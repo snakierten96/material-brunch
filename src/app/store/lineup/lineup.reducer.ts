@@ -6,7 +6,7 @@ import {
   PARTY_JOINED,
   PARTY_LEFT,
   PARTY_SEATED
-} from '../constants';
+} from '../../constants';
 
 export function lineupReducer(state: ILineup = INITIAL_STATE, action): ILineup {
   switch (action.type) {

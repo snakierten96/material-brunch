@@ -1,9 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { BrowserModule }    from '@angular/platform-browser';
+import { NgModule }         from '@angular/core';
+import { HttpModule }       from '@angular/http';
 
-import { AppComponent } from './app.component';
+import { MdSidenavModule }  from '@angular2-material/sidenav';
+import { MdListModule }     from '@angular2-material/list';
+import { MdToolbarModule }  from '@angular2-material/toolbar';
+import { MdButtonModule }   from '@angular2-material/button';
+import { MdInputModule }    from '@angular2-material/input'
+import { MdCardModule }     from '@angular2-material/card';
+import { MdIconModule }     from '@angular2-material/icon';
+
+import { AppComponent }     from './app.component';
 
 @NgModule({
   declarations: [
@@ -11,8 +18,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    HttpModule,
+    MdSidenavModule.forRoot(),
+    MdListModule.forRoot(),
+    MdToolbarModule.forRoot(),
+    MdButtonModule.forRoot(),
+    MdInputModule.forRoot(),
+    MdCardModule.forRoot(),
+    MdIconModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

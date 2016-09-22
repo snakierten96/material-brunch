@@ -14,7 +14,8 @@
 .classpath
 *.launch
 .settings/
-.c9
+/.c9
+/.vscode
 
 # misc
 /.sass-cache

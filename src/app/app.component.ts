@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  views: Object[] = [
+    {
+      name: "My Account",
+      description: "Edit my account information",
+      icon: "assignment ind"
+    }
+  ];
 }
