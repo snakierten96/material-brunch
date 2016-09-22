@@ -1,7 +1,7 @@
 //import persistState from 'redux-localstorage';
 const persistState = require('redux-localstorage');
-//import createLogger from 'redux-logger';
-const createLogger = require('create-logger');
+import * as createLogger from 'redux-logger';
+//const createLogger = require('create-logger');
 
 import { IAppState, rootReducer, deimmutify, reimmutify } from './store';
 import { ILineup, IParty } from './lineup';
