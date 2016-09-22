@@ -9,6 +9,7 @@ import { MdButtonModule }   from '@angular2-material/button';
 import { MdInputModule }    from '@angular2-material/input'
 import { MdCardModule }     from '@angular2-material/card';
 import { MdIconModule }     from '@angular2-material/icon';
+import { MdGridListModule } from '@angular2-material/grid-list';
 
 import { AppComponent }     from './app.component';
 
@@ -25,7 +26,8 @@ import { AppComponent }     from './app.component';
     MdButtonModule.forRoot(),
     MdInputModule.forRoot(),
     MdCardModule.forRoot(),
-    MdIconModule.forRoot()
+    MdIconModule.forRoot(),
+    MdGridListModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

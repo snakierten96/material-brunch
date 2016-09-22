@@ -18,6 +18,10 @@ md-card {
 }
 
 .card-container {
+  /*
   display: flex;
   flex-flow: row wrap;
+  */
+  padding: 5px;
+  background: l
 }
