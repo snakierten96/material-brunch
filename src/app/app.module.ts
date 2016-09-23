@@ -12,10 +12,17 @@ import { MdIconModule }     from '@angular2-material/icon';
 import { MdGridListModule } from '@angular2-material/grid-list';
 
 import { AppComponent }     from './app.component';
+import { LineupComponent }  from './lineup';
+import { TableComponent }   from './table';
+
+import { PartyService }     from './party/party.service';
+import { LineupActions, TableActions } from './actions';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LineupComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,7 @@ import { AppComponent }     from './app.component';
     MdIconModule.forRoot(),
     MdGridListModule.forRoot()
   ],
-  providers: [],
+  providers: [PartyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

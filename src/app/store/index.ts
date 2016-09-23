@@ -24,7 +24,7 @@ export const middleware = [
   createLogger({
     level: 'info',
     collapsed: true,
-    stateTrasformer: deimmutify
+    stateTransformer: deimmutify
   })
 ];
 

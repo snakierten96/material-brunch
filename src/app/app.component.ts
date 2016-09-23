@@ -23,4 +23,11 @@ export class AppComponent {
     { text: 'Pending Orders', cols: 3, rows: 2, color: '#DDBDF1' },
     { text: 'Inventory', cols: 3, rows: 2, color: 'olive' }
   ];
+  
+  tables: Object[] = [
+    { title: 'Table 1', color: 'lightgreen' },
+    { title: 'Table 2', color: 'lightpink' },
+    { title: 'Table 3', color: 'lightyellow' },
+    { title: 'Table 4', color: 'lightslategray' }
+  ];
 }

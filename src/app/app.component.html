@@ -19,7 +19,7 @@
   </md-toolbar>
 
   <!-- container -->
-  <div class="card-container">
+  <div class="grid-container">
 
     <!--   
     <md-card>
@@ -27,11 +27,34 @@
     </md-card>
     -->
 
+    <!--
     <md-grid-list cols="6" rowHeight="100px">
       <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
         [style.background]="tile.color">
         {{tile.text}}
       </md-grid-tile>
+    </md-grid-list>
+    -->
+    
+    <md-grid-list cols="6" rowHeight="100px">
+
+      <!-- Lineup -->
+      <md-grid-tile colspan="2" rowspan="2" style.background="lightblue">
+        <tb-lineup></tb-lineup>
+      </md-grid-tile>
+
+      <!-- Tables -->
+      <md-grid-tile *ngFor="let table of tables" colspan="2" rowspan="1" [style.background]="table.color">
+        <md-card>
+          <md-card-title>{{table.title}}</md-card-title>
+        </md-card>
+      </md-grid-tile>
+      
+      <!-- Pending Orders -->
+      
+      
+      <!-- Inventory -->
+
     </md-grid-list>
 
   </div>
