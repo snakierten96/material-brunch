@@ -1,0 +1,34 @@
+<div>
+  Table: {{ order.get('id') }}
+  <button
+    (click)="deliverOrder.emit(order.get('id'))">
+    Deliver Order
+  </button>
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Qty</th>
+        <th>Total</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of order.order">
+        <td>{{ item.get('description') }}</td>
+        <td>{{ item.get('qty') }}</td>
+        <td>{{ item.get('total')}}</td>
+        <td>
+          <button
+            (click)="itemAdded.emit({ tableId: order.get('id'), menuId: item.get('menuId') })">
+            <md-icon>add</md-icon>
+          </button>
+          <button
+            (click)="itemRemoved.emit({ tableId: order.get('id'), menuId: item.get('menuId') })">
+            <md-icon>subtract</md-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,29 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>Table Number {{ table.id }}, # Of Seats {{ table.numberOfSeats }}</md-card-title>
+    <md-card-subtitle>{{ table.status }}</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <ng-content></ng-content>
+  </md-card-content>
+  <md-card-actions 
+    *ngIf="table.status === 'CLEAN'" align="end">
+    <form curTable="ngForm">
+      <select name="partyId" [(ngModel)]="partyId">
+        <option [ngValue]="-1">--Select Party--</option>
+        <template ngFor let-party [ngForOf]="parties | async">
+          <option [ngValue]="party.partyId"
+            *ngIf="party.numberOfPeople <= table.numberOfSeats">
+            {{ party.partyName }}
+          </option>
+        </template>
+      </select>
+
+      <button
+        [disabled]="curTable.value.partyId == '-1'"
+        (click)="seatParty.emit({ partyId: curTable.value.partyId, tableId: table.id })">
+        Seat  
+      </button>
+    </form>
+  </md-card-actions>
+</md-card>

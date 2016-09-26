@@ -20,7 +20,7 @@ import {
 } from '../../constants';
 
 export function tableReducer(state: ITables = INITIAL_STATE, action): ITables {
-  if (!action.type || action.payload) {
+  if (!action.type || !action.payload) {
     return state;
   }
 
