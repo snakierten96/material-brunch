@@ -17,15 +17,15 @@ md-card {
 }
 
 .grid-container {
-  /*
-  display: flex;
-  flex-flow: row wrap;
-  */
   padding: 5px;
-  background: l
 }
 
 .card-container {
   display: flex;
   flex-flow: row wrap;
+}
+
+.card-container > md-card {
+  margin-bottom: 4px;
+  margin-right: 4px;
 }
