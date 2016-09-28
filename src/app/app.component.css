@@ -24,3 +24,8 @@ md-card {
   padding: 5px;
   background: l
 }
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+}

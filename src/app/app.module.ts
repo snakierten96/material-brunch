@@ -2,17 +2,9 @@ import { BrowserModule }          from '@angular/platform-browser';
 import { NgModule }               from '@angular/core';
 import { HttpModule }             from '@angular/http';
 import { FormsModule }            from '@angular/forms';
+import { MaterialModule }         from '@angular/material';
 
 import { NgRedux, NgReduxModule } from "ng2-redux";
-
-import { MdSidenavModule }        from '@angular2-material/sidenav';
-import { MdListModule }           from '@angular2-material/list';
-import { MdToolbarModule }        from '@angular2-material/toolbar';
-import { MdButtonModule }         from '@angular2-material/button';
-import { MdInputModule }          from '@angular2-material/input'
-import { MdCardModule }           from '@angular2-material/card';
-import { MdIconModule }           from '@angular2-material/icon';
-import { MdGridListModule }       from '@angular2-material/grid-list';
 
 import { AppComponent }           from './app.component';
 import { LineupComponent }        from './lineup';
@@ -35,14 +27,7 @@ import { LineupActions, TableActions } from './actions';
     BrowserModule,
     HttpModule,
     FormsModule,
-    MdSidenavModule.forRoot(),
-    MdListModule.forRoot(),
-    MdToolbarModule.forRoot(),
-    MdButtonModule.forRoot(),
-    MdInputModule.forRoot(),
-    MdCardModule.forRoot(),
-    MdIconModule.forRoot(),
-    MdGridListModule.forRoot(),
+    MaterialModule.forRoot(),
     NgReduxModule
   ],
   providers: [
