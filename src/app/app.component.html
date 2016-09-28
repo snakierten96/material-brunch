@@ -36,7 +36,7 @@
     </md-grid-list>
     -->
     
-    <md-grid-list cols="6" rowHeight="100px">
+    <md-grid-list cols="6">
 
       <!-- Lineup -->
       <md-grid-tile colspan="2" rowspan="2" style.background="lightblue">
@@ -47,7 +47,59 @@
         </tb-lineup>
       </md-grid-tile>
 
-      <!-- Tables -->
+      <md-grid-tile colspan="4" rowspan="2">
+        <div class="card-container">
+          <div *ngFor="let table of tables$ | async">
+            <tb-table
+              [table]="table"
+              [parties]="lineup$"
+              (seatParty)="_tableActions.seatParty($event)">
+    
+              <button
+                *ngIf="table.status === 'OCCUPIED'"
+                (click)="_tableActions.startOrder(table.id)">
+                Start Order
+              </button>
+    
+              <button
+                *ngIf="table.status === 'ORDERED'"
+                (click)="_tableActions.deliverOrder(table.id)">
+                Deliver
+              </button>
+    
+              <button
+                *ngIf="table.status === 'HAS_FOOD'"
+                (click)="_tableActions.payBill(table.id)">
+                Pay Bill
+              </button>
+    
+              <button
+                *ngIf="table.status === 'DIRTY'"
+                (click)="_tableActions.cleanTable(table.id)">
+                Clean Table
+              </button>
+    
+              <template [ngIf]="table.status === 'ORDERING'">
+                <tb-menu
+                  *ngIf="table.status === 'ORDERING'"
+                  [menuItems]="menu$ | async"
+                  [tableId]="table.id"
+                  [currentOrder]="table.order"
+                  (itemAdded)="_tableActions.addItemToOrder($event)"
+                  (itemRemoved)="_tableActions.removeItemFromOrder($event)">
+                </tb-menu>
+    
+                <button
+                  (click)="_tableActions.completeOrder(table.id)">
+                  Complete Order
+                </button>
+              </template>
+            </tb-table>
+          </div>
+        </div>
+      </md-grid-tile>
+
+      <!-- Tables
       <md-grid-tile 
         *ngFor="let table of tables$ | async"
         colspan="2" rowspan="1">
@@ -99,6 +151,7 @@
         </tb-table>
 
       </md-grid-tile>
+      -->
 
       <!-- Old Tables
       <md-grid-tile *ngFor="let table of tables" colspan="2" rowspan="1" [style.background]="table.color">

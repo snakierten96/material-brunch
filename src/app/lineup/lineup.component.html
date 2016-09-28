@@ -18,10 +18,10 @@
           <td>{{ party.partyName }}</td>
           <td>
             <button 
-              md-raised-button
-              color="accent"
+              md-icon-button
+              color="warn"
               (click)="partyLeft.emit({ partyId: party.partyId })">
-              <md-icon>close</md-icon>
+              <md-icon>delete</md-icon>
             </button>
           </td>
         </tr>

@@ -1,0 +1,26 @@
+/*
+ * App theming
+ *
+ */
+
+
+@import '~@angular/material/core/theming/all-theme';
+
+@include md-core();
+
+/*
+ * More like previous alpha theme
+ * primary: teal
+ * accent:  purple
+ *
+ * Reference: https://material.google.com/style/color.html 
+ */
+
+$primary: md-palette($md-teal);
+$accent:  md-palette($md-purple, 700, 600, 800);
+
+$warn:    md-palette($md-deep-orange);
+
+$theme: md-light-theme($primary,$accent,$warn);
+
+@include angular-material-theme($theme);

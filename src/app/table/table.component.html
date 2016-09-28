@@ -8,7 +8,7 @@
   </md-card-content>
   <md-card-actions 
     *ngIf="table.status === 'CLEAN'" align="end">
-    <form curTable="ngForm">
+    <form #curTable="ngForm">
       <select name="partyId" [(ngModel)]="partyId">
         <option [ngValue]="-1">--Select Party--</option>
         <template ngFor let-party [ngForOf]="parties | async">
@@ -20,6 +20,7 @@
       </select>
 
       <button
+        md-raised-button color="accent"
         [disabled]="curTable.value.partyId == '-1'"
         (click)="seatParty.emit({ partyId: curTable.value.partyId, tableId: table.id })">
         Seat  

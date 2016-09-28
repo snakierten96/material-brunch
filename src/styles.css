@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+md-grid-tile figure {
+  display: block !important;
+  margin: 4px !important;
+}
