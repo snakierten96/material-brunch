@@ -9,6 +9,7 @@ import {
  @Component({
    selector: 'tb-menu',
    templateUrl: './menu.component.html',
+   styleUrls: ['./menu.component.css'],
    changeDetection: ChangeDetectionStrategy.OnPush
  })
  export class MenuComponent {

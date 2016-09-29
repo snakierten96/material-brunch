@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+thead th:last-of-type {
+  text-align: center;
+}
+
+th .material-icons {
+  display: inline;
+  font-size: inherit;
+}

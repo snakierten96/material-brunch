@@ -17,13 +17,13 @@ export const INITIAL_STATE: ITables = reimmutifyTables([
     order: Map<number, number>()
   },
   {
-    id: 1,
+    id: 3,
     numberOfSeats: 4,
     status: CLEAN,
     order: Map<number, number>()
   },
   {
-    id: 1,
+    id: 4,
     numberOfSeats: 2,
     status: CLEAN,
     order: Map<number, number>()

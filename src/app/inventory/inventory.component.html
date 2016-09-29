@@ -1,0 +1,19 @@
+<md-card>
+  <md-card-title>Inventory</md-card-title>
+  <md-card-content>
+    <table>
+      <thead>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Stock</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let menuItem of menu">
+          <td>{{ menuItem.description }}</td>
+          <td>{{ menuItem.price | currency:'AUD':true }}</td>
+          <td>{{ menuItem.stock }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </md-card-content>
+</md-card>

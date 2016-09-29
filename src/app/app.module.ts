@@ -11,6 +11,7 @@ import { LineupComponent }        from './lineup';
 import { TableComponent }         from './table';
 import { MenuComponent }          from './menu';
 import { OrdersComponent }        from './orders';
+import { InventoryComponent }     from './inventory';
 
 import { PartyService }           from './party/party.service';
 import { LineupActions, TableActions } from './actions';
@@ -21,7 +22,8 @@ import { LineupActions, TableActions } from './actions';
     LineupComponent,
     TableComponent,
     MenuComponent,
-    OrdersComponent
+    OrdersComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserModule,

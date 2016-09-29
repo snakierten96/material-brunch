@@ -4,7 +4,7 @@
       <th>Desc</th>
       <th>Qty</th>
       <th>Stock</th>
-      <th>+/-</th>
+      <th><md-icon>add</md-icon>/<md-icon>remove</md-icon></th>
     </tr>
   </thead>
   <tbody>
@@ -13,11 +13,13 @@
       <td>{{ currentOrder.get(item.menuId, 0) }}</td>
       <td>{{ item.stock }}</td>
       <td>
-        <button (click)="itemAdded.emit({ tableId: tableId, menuId: item.menuId })">
-          <md-icon>add</md-icon>
+        <button md-icon-button color="primary"
+          (click)="itemAdded.emit({ tableId: tableId, menuId: item.menuId })">
+          <md-icon>add_circle</md-icon>
         </button>
-        <button (click)="itemRemoved.emit({ tableId: tableId, menuId: item.menuId })">
-          <md-icon>subtract</md-icon>
+        <button md-icon-button color="primary"
+          (click)="itemRemoved.emit({ tableId: tableId, menuId: item.menuId })">
+          <md-icon>remove_circle</md-icon>
         </button>
       </td>
     </tr>

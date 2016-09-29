@@ -1,6 +1,7 @@
 <div>
   Table: {{ order.get('id') }}
   <button
+    md-raised-button color="accent"
     (click)="deliverOrder.emit(order.get('id'))">
     Deliver Order
   </button>
@@ -17,15 +18,17 @@
       <tr *ngFor="let item of order.order">
         <td>{{ item.get('description') }}</td>
         <td>{{ item.get('qty') }}</td>
-        <td>{{ item.get('total')}}</td>
+        <td>{{ item.get('total') | currency:'AUD':true }}</td>
         <td>
           <button
+            md-icon-button color="primary"
             (click)="itemAdded.emit({ tableId: order.get('id'), menuId: item.get('menuId') })">
-            <md-icon>add</md-icon>
+            <md-icon>add_circle</md-icon>
           </button>
           <button
+            md-icon-button color="primary"
             (click)="itemRemoved.emit({ tableId: order.get('id'), menuId: item.get('menuId') })">
-            <md-icon>subtract</md-icon>
+            <md-icon>remove_circle</md-icon>
           </button>
         </td>
       </tr>

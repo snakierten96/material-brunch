@@ -4,7 +4,7 @@ import { reimmutifyMenu } from './menu.transformers';
 export const INITIAL_STATE: IMenu = reimmutifyMenu([
   {
     menuId: 'pancake',
-    description: 'Stack f Pancakes',
+    description: 'Stack of Pancakes',
     stock: 50,
     price: 1.99
   },
