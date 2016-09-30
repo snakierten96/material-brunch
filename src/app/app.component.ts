@@ -9,7 +9,7 @@ import {
   enhancers
 } from './store';
 import { LineupActions, TableActions } from './actions';
-import { placedOrders } from './selectors/selectors';
+import { placedOrders } from './selectors';
 
 @Component({
   selector: 'app-root',

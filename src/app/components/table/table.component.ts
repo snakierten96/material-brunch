@@ -6,7 +6,7 @@ import {
   EventEmitter
 } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IParty } from '../store';
+import { IParty } from '../../store';
 
 @Component({
   selector: 'tb-table',

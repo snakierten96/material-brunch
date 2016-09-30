@@ -3,7 +3,7 @@ import {
   Input,
   ChangeDetectionStrategy
 } from '@angular/core';
-import { IMenu } from '../store';
+import { IMenu } from '../../store';
 
 @Component({
   selector: 'tb-inventory',

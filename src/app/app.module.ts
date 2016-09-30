@@ -7,13 +7,15 @@ import { MaterialModule }         from '@angular/material';
 import { NgRedux, NgReduxModule } from "ng2-redux";
 
 import { AppComponent }           from './app.component';
-import { LineupComponent }        from './lineup';
-import { TableComponent }         from './table';
-import { MenuComponent }          from './menu';
-import { OrdersComponent }        from './orders';
-import { InventoryComponent }     from './inventory';
+import {
+  LineupComponent,
+  TableComponent,
+  MenuComponent,
+  OrdersComponent,
+  InventoryComponent
+} from './components';
 
-import { PartyService }           from './party/party.service';
+import { PartyService } from './services';
 import { LineupActions, TableActions } from './actions';
 
 @NgModule({

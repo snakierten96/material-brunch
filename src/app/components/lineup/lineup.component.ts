@@ -5,7 +5,7 @@ import {
   ChangeDetectionStrategy,
   EventEmitter
 } from '@angular/core';
-import { ILineup } from '../store';
+import { ILineup } from '../../store';
 
 @Component({
   selector: 'tb-lineup',
