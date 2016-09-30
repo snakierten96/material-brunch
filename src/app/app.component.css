@@ -11,16 +11,22 @@ md-sidenav-layout {
   background: rgba(0, 0,0, 0.03);
 }
 
-md-card {
-  box-sizing: border-box;
-  margin: 16px;
+.grid-container {
+  margin: 5px;
+  height: 100%;
 }
 
-.grid-container {
-  padding: 5px;
+.grid-container > md-grid-list {
+  height: inherit;  
 }
 
 .card-container {
   display: flex;
   flex-flow: row wrap;
+  overflow: auto;
+  height: inherit;
+}
+
+.card-container tb-table {
+  width: 50%;
 }

@@ -21,11 +21,10 @@
   <!-- container -->
   <div class="grid-container">
 
-
-    <md-grid-list cols="6">
+    <md-grid-list cols="6" rowHeight="fit">
 
       <!-- Lineup -->
-      <md-grid-tile colspan="2" rowspan="2" style.background="lightblue">
+      <md-grid-tile colspan="2">
         <tb-lineup
           [lineup]="lineup$ | async"
           (partyJoined)="_lineupActions.joinLine($event)"
@@ -33,7 +32,7 @@
         </tb-lineup>
       </md-grid-tile>
 
-      <md-grid-tile colspan="4" rowspan="2">
+      <md-grid-tile colspan="4">
         <div class="card-container">
           <tb-table *ngFor="let table of tables$ | async"
             [table]="table"
@@ -89,7 +88,7 @@
       </md-grid-tile>
 
       <!-- Pending Orders -->
-      <md-grid-tile colspan="3" rowspan="2">
+      <md-grid-tile colspan="3">
          <md-card>
            <md-card-title>Pending Orders</md-card-title>
            <md-card-content>
@@ -105,9 +104,8 @@
       </md-grid-tile>
       
       <!-- Inventory -->
-      <md-grid-tile colspan="3" rowspan="2">
-        <tb-inventory
-          [menu]="menu$ | async">
+      <md-grid-tile colspan="3">
+        <tb-inventory [menu]="menu$ | async">
         </tb-inventory>
       </md-grid-tile>
 
