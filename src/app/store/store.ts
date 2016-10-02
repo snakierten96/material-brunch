@@ -6,7 +6,7 @@ import * as tables  from './tables';
 export interface IAppState {
   lineup?: lineup.ILineup;
   menu?: menu.IMenu;
-  tables?: tables.ITables
+  tables?: tables.ITables;
 };
 
 export const rootReducer = combineReducers<IAppState>({

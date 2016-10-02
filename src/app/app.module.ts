@@ -4,7 +4,7 @@ import { HttpModule }             from '@angular/http';
 import { FormsModule }            from '@angular/forms';
 import { MaterialModule }         from '@angular/material';
 
-import { NgRedux, NgReduxModule } from "ng2-redux";
+import { NgReduxModule }          from 'ng2-redux';
 
 import { AppComponent }           from './app.component';
 import {

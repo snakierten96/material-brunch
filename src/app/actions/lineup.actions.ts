@@ -9,7 +9,7 @@ export class LineupActions {
   constructor(
     private _ngRedux: NgRedux<IAppState>,
     private _party: PartyService) { }
-    
+
   joinLine = ({ numberOfPeople, partyName }) => {
     return this._party.getNextPartyId().then(partyId => {
       return this._ngRedux.dispatch({
@@ -22,7 +22,7 @@ export class LineupActions {
       });
     });
   };
-  
+
   leaveLine = ({ partyId }) => {
     return this._ngRedux.dispatch({
       type: PARTY_LEFT,
@@ -31,5 +31,5 @@ export class LineupActions {
       }
     });
   };
-  
+
 }
