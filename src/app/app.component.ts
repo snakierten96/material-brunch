@@ -22,6 +22,14 @@ export class AppComponent {
   @select() menu$: Observable<IMenu>;
   @select(placedOrders) placedOrders$: Observable<any>;
 
+  views: Object[] = [
+    {
+      name: 'My Account',
+      description: 'Edit my account information',
+      icon: 'assignment ind'
+    }
+  ];
+
   constructor(
     private _ngRedux: NgRedux<IAppState>,
     private _tableActions: TableActions,
@@ -35,13 +43,5 @@ export class AppComponent {
     );
 
   }
-
-  views: Object[] = [
-    {
-      name: "My Account",
-      description: "Edit my account information",
-      icon: "assignment ind"
-    }
-  ];
 
 }

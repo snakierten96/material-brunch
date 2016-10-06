@@ -14,10 +14,10 @@ export function lineupReducer(state: ILineup = INITIAL_STATE, action): ILineup {
       return state.push(action.payload);
     case PARTY_LEFT:
       return state
-        .filter(n => n.partyId != action.payload.partyId) as ILineup;
+        .filter(n => n.partyId !== action.payload.partyId) as ILineup;
     case PARTY_SEATED:
       return state
-        .filter(n => n.partyId != action.payload.partyId) as ILineup;
+        .filter(n => n.partyId !== action.payload.partyId) as ILineup;
     default:
       return state;
   }

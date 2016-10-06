@@ -8,7 +8,8 @@ import {
 
 @Component({
   selector: 'tb-orders',
-  templateUrl: 'orders.component.html'
+  templateUrl: 'orders.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OrdersComponent {
   @Input() order: any;
