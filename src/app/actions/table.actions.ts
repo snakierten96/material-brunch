@@ -53,7 +53,6 @@ export class TableActions {
   };
 
   deliverOrder = (tableId) => {
-
     return this._ngRedux.dispatch({
       type: ORDER_DELIVERED,
       payload: {
@@ -101,3 +100,4 @@ export class TableActions {
   };
 }
 
+  
