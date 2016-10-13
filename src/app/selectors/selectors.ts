@@ -8,7 +8,7 @@ const menuSelector = createSelector<IAppState, any, any>(
   menu => menu);
 
 const placedOrdersFilter = (tables: any) => tables
-  .filter(n => n.get('status') === 'ORDERED') as ITables;
+  .filter(n => n.get('status') === ORDERED) as ITables;
 
 const placedOrderSelector = createSelector<IAppState, any,any>(
   n => n.tables,
